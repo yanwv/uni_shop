@@ -24,6 +24,13 @@
         "enablePullDownRefresh": false
       }
 
+    }, {
+      "path": "serach/serach",
+      "style": {
+        "navigationBarTitleText": "",
+        "enablePullDownRefresh": false
+      }
+
     }]
   }],
   "globalStyle": {
