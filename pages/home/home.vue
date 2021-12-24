@@ -32,7 +32,8 @@
           </navigator>
           <!-- 右侧 -->
           <view class="right-img-box">
-            <navigator class="right-img-item" v-for="(item2,i2) in item.product_list" :key="i2" v-if="i2!==0" :url="item2.url">
+            <navigator class="right-img-item" v-for="(item2,i2) in item.product_list" :key="i2" v-if="i2!==0"
+              :url="item2.url">
               <image :src="item2.image_src" :style="{width:item2.image_width+'rpx'}" mode="widthFix"></image>
             </navigator>
           </view>
@@ -43,7 +44,9 @@
 </template>
 
 <script>
+  import badgeMix from '../../mixins/tabbar-badge.js'
   export default {
+    mixins: [badgeMix],
     data() {
       return {
         // 轮播图数据
@@ -96,9 +99,9 @@
         })
         this.floorList = res.message
       },
-      gotoSearch(){
+      gotoSearch() {
         uni.navigateTo({
-          url:'/subpkg/serach/serach'
+          url: '/subpkg/serach/serach'
         })
       }
     }
@@ -142,7 +145,8 @@
     display: flex;
     padding-left: 10rpx;
   }
-  .search-box{
+
+  .search-box {
     position: sticky;
     top: 0;
     z-index: 999;

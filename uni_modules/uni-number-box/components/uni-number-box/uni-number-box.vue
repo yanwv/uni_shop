@@ -131,9 +131,10 @@
 			},
 			_onBlur(event) {
 				this.$emit('blur', event)
-				let value = event.detail.value;
+				// 将用户输入的内容转化为整数
+				let value = parseInt(event.detail.value);
 				if (!value) {
-					// this.inputValue = 0;
+          this.inputValue = 1;
 					return;
 				}
 				value = +value;
